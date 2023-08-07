@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 //TNT91
 namespace Infrastructure.Entities
 {
-	//TNT91
-	public class TechShopDbContext : IdentityDbContext
+    // ke thua tu IdentityDbContext de Db co them cac bang Role, Claims
+    public class TechShopDbContext : IdentityDbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -17,7 +17,7 @@ namespace Infrastructure.Entities
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Bill> Bills { get; set; }
         public DbSet<BillDetail> BillDetails { get; set; }
-
+        // contractor
 		public TechShopDbContext(DbContextOptions<TechShopDbContext> options) : base(options)
 		{
 
